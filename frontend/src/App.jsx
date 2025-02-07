@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar"
 import AddEvent from "./components/AddEvent"
 import RegisteredEvents from "./components/RegisteredEvents"
 import ShimmerUI from "./skeletons/ShimmerUI"
+import Footer from "./skeletons/Footer"
 
 function App() {
   const{ authUser,checkAuth,ischeckingAuth } = useAuthStore()
@@ -41,6 +42,7 @@ function App() {
       <Route path="/listyourevent" element={<AddEvent></AddEvent>}></Route>
       <Route path="/yourregisteredevent" element={<RegisteredEvents></RegisteredEvents>}></Route>
     </Routes>
+    <Footer></Footer>
     <Toaster></Toaster>
   </div>
   )
