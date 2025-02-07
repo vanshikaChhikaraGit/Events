@@ -64,13 +64,13 @@ const EventById = () => {
       toast.error( error.response?.data?.message);
     }
   };
-  if (loadingEvents) return <p><ShimmerUI></ShimmerUI></p>;
-  if (!eventWithId) return <p>No event found</p>;
+  if (loadingEvents) return <ShimmerUI></ShimmerUI>;
+  if (!eventWithId) return <Error></Error>;
 
   return (
     <div>
     <Navbar></Navbar>
-      <div className="flex md:flex-row flex-col justify-between m-10  ">
+      <div className="flex md:flex-row flex-col justify-between m-10 ">
         <div className="h-full w-1/2 m-3 p-2">
         <div className="">
         <img
@@ -131,7 +131,7 @@ const EventById = () => {
               <Twitter className="size-6 mr-3"></Twitter>{" "}
               <a
                 class="twitter-share-button"
-                href="https://twitter.com/intent/tweet?text=Hello%20world"
+                href={`https://twitter.com/intent/tweet?text=🚀 Join me at ${eventWithId.eventname}! 🎉 Don't miss out! Check it out here: https://events-kyyg.onrender.com/event/${id} &hashtags=Event,Party,Networking`}
                 data-size="large"
               >
                 Tweet

@@ -1,5 +1,4 @@
 import { Navigate, Route,Routes } from "react-router-dom"
-import Landing from "./components/Landing"
 import Home from "./components/Home"
 import Signup from "./components/Signup"
 import Login from "./components/Login"
@@ -12,6 +11,7 @@ import FilterEvents from "./components/FilterEvents"
 import Navbar from "./components/Navbar"
 import AddEvent from "./components/AddEvent"
 import RegisteredEvents from "./components/RegisteredEvents"
+import ShimmerUI from "./skeletons/ShimmerUI"
 
 function App() {
   const{ authUser,checkAuth,ischeckingAuth } = useAuthStore()

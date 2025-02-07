@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CircleUserRound } from "lucide-react";
 import { axiosInstance } from "@/lib/axios";
 import toast from "react-hot-toast";
@@ -21,10 +21,10 @@ const Navbar = () => {
   
 
   return (
-    <div className="navbar bg-base-300 rounded-box px-4 flex justify-between m-2 mb-5">
+    <div className="navbar bg-base-300 rounded-box px-4 flex justify-between m-2 mt-5 mb-5">
       {/* Left Side: Logo */}
       <div className="flex-1">
-        <a className="text-4xl font-bold">Events</a>
+        <Link to={"/"} className="text-4xl font-bold">Events</Link>
       </div>
 
       {/* Right Side: Buttons */}

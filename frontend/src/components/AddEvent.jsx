@@ -76,7 +76,7 @@ const AddEvent = () => {
   
       if (response.status === 201) {
         toast.success("Event created successfully!");
-        navigate("/home");
+        navigate("/");
       } else {
         toast.error("Failed to create event.");
       }

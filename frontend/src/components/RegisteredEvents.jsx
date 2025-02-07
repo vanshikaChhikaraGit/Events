@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import { IndianRupee, MapPin } from 'lucide-react'
 import Error from '@/skeletons/Error'
+import ShimmerUI from '@/skeletons/ShimmerUI'
 
 const RegisteredEvents = () => {
     const { registeredEvents,getRegisteredEvents,loadingEvents } = useEventStore()
@@ -10,8 +11,8 @@ const RegisteredEvents = () => {
         getRegisteredEvents()
     },[])
 
-    if(loadingEvents)return <div>Loading</div>
-    if(!registeredEvents||registeredEvents.length==0)return <div><Error></Error></div>
+    if(loadingEvents)return <div><ShimmerUI></ShimmerUI></div>
+    if(!registeredEvents||registeredEvents.length==0)return <Error></Error>
   return (
     <div className='m-5'>
     <Navbar></Navbar>
