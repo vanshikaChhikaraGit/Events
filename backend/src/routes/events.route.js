@@ -10,7 +10,7 @@ router.get("/geteventbyid/:id", getEventById); // ✅ Fetch a single event by ID
 router.post("/addevent", middleware, createEvent); // ✅ Create an event
 router.post("/register/:id", middleware, registerForEvent); // ✅ Register a user for an event
 router.delete("/deleteevent/:id", middleware, deleteEvent); // ✅ Delete an event
-router.get("/registeredevents",middleware,userRegisteredEvents ); // ✅ Fetch real-time attendee count
+router.get("/userregisteredevents",middleware,userRegisteredEvents ); // ✅ Fetch real-time attendee count
 router.get("/listedevents",middleware,userListedEvents)
 
 

@@ -8,6 +8,6 @@ router.post("/signup",signup)
 router.post("/login",login)
 router.post("/logout",logout)
 
-router.post("/checkauth",middleware,checkAuth)
+router.get("/checkauth",middleware,checkAuth)
 
 export default router;

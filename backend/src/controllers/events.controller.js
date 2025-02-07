@@ -27,6 +27,7 @@ export const getEventById = async(req,res)=>{
 export const createEvent = async(req,res)=>{
     try {
         const { eventname,description,date,price,venue,language,category,image } = req.body;
+        const eventCategory = category.toLowerCase()
         const createdBy = req.user._id;
         const uploadResponse = await cloudinary.uploader.upload(image);
         const uploadImageResponse = uploadResponse.secure_url
@@ -37,7 +38,7 @@ export const createEvent = async(req,res)=>{
            price,
            venue,
            language,
-           category,
+           category:eventCategory,
            image:uploadImageResponse,
            createdBy
         })
